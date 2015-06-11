@@ -5,7 +5,7 @@
 ** Login   <laloge_h@epitech.net>
 **
 ** Started on  Tue Jun  9 16:31:33 2015 Hugo Laloge
-** Last update Wed Jun 10 17:46:08 2015 Hugo Laloge
+** Last update Thu Jun 11 16:26:26 2015 Hugo Laloge
 */
 
 #ifndef		PROMPTOMATIC_HPP_
@@ -47,8 +47,10 @@ namespace	promptomatic
     void	stop_loop();
   };
 
+  /* Commandes internes */
   int	prompt_exit(const Arguments &args, Prompt &prompt);
   int	prompt_help(const Arguments &args, Prompt &prompt);
+  int   prompt_clear(const Arguments &args, Prompt &prompt);
 }
 
 #endif		/* !PROMPTOMATIC_HPP_ */

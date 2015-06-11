@@ -5,7 +5,7 @@
 ** Login   <laloge_h@epitech.net>
 **
 ** Started on  Tue Jun  9 16:12:38 2015 Hugo Laloge
-** Last update Wed Jun 10 17:55:58 2015 Hugo Laloge
+** Last update Thu Jun 11 16:26:17 2015 Hugo Laloge
 */
 
 #include	<iostream>
@@ -18,6 +18,7 @@ promptomatic::Prompt::Prompt(const std::string &prompt_str) :
 {
   _intern_command_map.insert(std::pair<std::string, promptomatic::InternCommand>("exit", promptomatic::InternCommand(prompt_exit, "exit the prompt")));
   _intern_command_map.insert(std::pair<std::string, promptomatic::InternCommand>("help", promptomatic::InternCommand(prompt_help, "display help")));
+  _intern_command_map.insert(std::pair<std::string, promptomatic::InternCommand>("clear", promptomatic::InternCommand(prompt_clear, "clear screen")));
 }
 
 promptomatic::Prompt::~Prompt()

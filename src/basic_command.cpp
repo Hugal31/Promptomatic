@@ -5,9 +5,10 @@
 ** Login   <laloge_h@epitech.net>
 **
 ** Started on  Wed Jun 10 10:53:07 2015 Hugo Laloge
-** Last update Wed Jun 10 17:54:45 2015 Hugo Laloge
+** Last update Thu Jun 11 16:31:09 2015 Hugo Laloge
 */
 
+#include	<cstdlib>
 #include	<iostream>
 #include	"promptomatic.hpp"
 
@@ -39,5 +40,13 @@ int	promptomatic::prompt_help(const Arguments &args, Prompt &prompt)
 	std::cout << " : " << it->second.desc;
       std::cout << std::endl;
     }
+  return (0);
+}
+
+int	promptomatic::prompt_clear(const Arguments &args, Prompt &prompt)
+{
+  (void)args;
+  (void)prompt;
+  system("clear");
   return (0);
 }
