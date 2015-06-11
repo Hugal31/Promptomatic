@@ -5,7 +5,7 @@
 ** Login   <laloge_h@epitech.net>
 **
 ** Started on  Wed Jun 10 10:15:00 2015 Hugo Laloge
-** Last update Wed Jun 10 17:24:19 2015 Hugo Laloge
+** Last update Thu Jun 11 19:16:01 2015 Hugo Laloge
 */
 
 #ifndef		PROMPTOMATIC_COMMAND_HPP_
@@ -24,8 +24,13 @@ namespace	promptomatic
   {
     cmd_handler_func	func;
     std::string		desc;
+    int			arg_min;
+    int			arg_max;
 
-    Command(cmd_handler_func param_func, const std::string &param_desc = "");
+    Command(cmd_handler_func _func, const std::string &_desc = "");
+    Command(cmd_handler_func _func,
+	    int _arg_min, int _arg_max = -1,
+	    const std::string &_desc = "");
     virtual	~Command();
   };
 
@@ -33,8 +38,13 @@ namespace	promptomatic
   {
     intern_cmd_handler_func	func;
     std::string			desc;
+    int				arg_min;
+    int				arg_max;
 
-    InternCommand(intern_cmd_handler_func param_func, const std::string &param_desc = "");
+    InternCommand(intern_cmd_handler_func _func, const std::string &_desc = "");
+    InternCommand(intern_cmd_handler_func _func,
+		  int _arg_min, int _arg_max = -1,
+		  const std::string &_desc = "");
     virtual	~InternCommand();
   };
 }

@@ -5,7 +5,7 @@
 ** Login   <laloge_h@epitech.net>
 **
 ** Started on  Tue Jun  9 16:31:33 2015 Hugo Laloge
-** Last update Thu Jun 11 16:26:26 2015 Hugo Laloge
+** Last update Thu Jun 11 19:35:21 2015 Hugo Laloge
 */
 
 #ifndef		PROMPTOMATIC_HPP_
@@ -40,8 +40,19 @@ namespace	promptomatic
     intern_command_map	&get_intern_command_map();
 
     void	set_prompt(const std::string &prompt_str);
+    void	map_intern_command(const std::string &key,
+				   intern_cmd_handler_func func,
+				   const std::string &helptext = "");
+    void	map_intern_command(const std::string &key,
+				   intern_cmd_handler_func func,
+				   int arg_min, int arg_max = -1,
+				   const std::string &helptext = "");
     void	map_command(const std::string &key, cmd_handler_func func,
 			     const std::string &helptext = "");
+    void        map_command(const std::string &key,
+			    cmd_handler_func func,
+			    int arg_min, int arg_max = -1,
+			    const std::string &helptext = "");
     void	unmap_command(const std::string &key);
     void	input_loop();
     void	stop_loop();
